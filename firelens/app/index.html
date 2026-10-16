@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FireLens — Harmonised MODIS &amp; VIIRS Burning-Activity Calendar</title>
+<meta name="description" content="FireLens harmonises the MODIS and VIIRS active-fire hot-spot records into one comparable burning-activity calendar for early warning, science and land management.">
+<meta name="color-scheme" content="dark">
+<link rel="stylesheet" href="css/app.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2.5c1.6 4.2-.4 6.3-2.2 8.2C11.6 13 9.8 15 10.2 18.4c-1.5-.6-2.6-1.9-3-3.4-1.6 2-2.3 4.4-1.9 6.8.7 4.2 4.4 7.4 8.9 7.7 5.4.4 10-3.4 10.6-8.6.5-4.6-1.9-7.6-4.6-10.6-1.7-1.9-3.4-3.7-4.2-7.8z' fill='%23f79218'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <svg width="54" height="54" viewBox="0 0 32 32" aria-hidden="true">
+    <defs><linearGradient id="lg" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e0561f"/><stop offset="55%" stop-color="#f79218"/><stop offset="100%" stop-color="#ffd24a"/>
+    </linearGradient></defs>
+    <path d="M16 2.5c1.6 4.2-.4 6.3-2.2 8.2C11.6 13 9.8 15 10.2 18.4c-1.5-.6-2.6-1.9-3-3.4-1.6 2-2.3 4.4-1.9 6.8.7 4.2 4.4 7.4 8.9 7.7 5.4.4 10-3.4 10.6-8.6.5-4.6-1.9-7.6-4.6-10.6-1.7-1.9-3.4-3.7-4.2-7.8z" fill="url(#lg)"/>
+  </svg>
+  <h2>FIRE<em>LENS</em></h2>
+  <div class="bar"><i></i></div>
+  <div class="msg" id="load-msg">starting…</div>
+</div>
+
+<div class="app" id="app"></div>
+
+<noscript><div style="padding:40px;font-family:sans-serif">FireLens needs JavaScript.</div></noscript>
+
+<script src="js/world.js"></script>
+<script src="js/util.js"></script>
+<script src="js/harmonize.js"></script>
+<script src="js/data.js"></script>
+<script src="js/analysis.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/map.js"></script>
+<script src="js/import.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

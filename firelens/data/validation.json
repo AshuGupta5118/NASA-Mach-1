@@ -1,0 +1,1266 @@
+{
+ "record": {
+  "start": "2001-01-01",
+  "end": "2025-12-31",
+  "days": 9131,
+  "totals": {
+   "modis": 222657801,
+   "viirs": 1205969759,
+   "true": 568300544.0
+  }
+ },
+ "bridge_factor": 0.9952,
+ "estimator_metrics_global": {
+  "raw MODIS count": {
+   "bias_pct": -60.82,
+   "rmse": 42319.36,
+   "mae": 37853.76,
+   "nrmse_pct": 68.0,
+   "pearson_r": 0.9509,
+   "spearman_rho": 0.9111,
+   "mean_est": 24384.82,
+   "mean_truth": 62238.58
+  },
+  "raw VIIRS count": {
+   "bias_pct": 275.52,
+   "rmse": 210353.75,
+   "mae": 173178.98,
+   "nrmse_pct": 334.97,
+   "pearson_r": 0.733,
+   "spearman_rho": 0.7485,
+   "mean_est": 235817.32,
+   "mean_truth": 62797.74
+  },
+  "naive MODIS+VIIRS sum": {
+   "bias_pct": 151.39,
+   "rmse": 179116.1,
+   "mae": 128228.75,
+   "nrmse_pct": 287.79,
+   "pearson_r": 0.4743,
+   "spearman_rho": 0.3885,
+   "mean_est": 156459.05,
+   "mean_truth": 62238.58
+  },
+  "harmonised (bridge, no platform correction)": {
+   "bias_pct": 27.96,
+   "rmse": 41936.37,
+   "mae": 22645.84,
+   "nrmse_pct": 67.38,
+   "pearson_r": 0.6957,
+   "spearman_rho": 0.6983,
+   "mean_est": 79637.71,
+   "mean_truth": 62238.58
+  },
+  "harmonised (full)": {
+   "bias_pct": -0.57,
+   "rmse": 4012.98,
+   "mae": 551.93,
+   "nrmse_pct": 6.45,
+   "pearson_r": 0.9916,
+   "spearman_rho": 0.9877,
+   "mean_est": 61881.0,
+   "mean_truth": 62238.58
+  },
+  "harmonised (no quality control)": {
+   "bias_pct": -0.87,
+   "rmse": 4992.82,
+   "mae": 734.5,
+   "nrmse_pct": 8.02,
+   "pearson_r": 0.987,
+   "spearman_rho": 0.9807,
+   "mean_est": 61696.42,
+   "mean_truth": 62238.58
+  }
+ },
+ "steps_pct": [
+  {
+   "boundary": "Aqua joins Terra (MODIS 1->2 sats)",
+   "date": "2002-07-04",
+   "truth": 28.19718254747138,
+   "raw_modis": 176.93028208483284,
+   "raw_viirs": 0.0,
+   "naive_sum": 176.93028208483284,
+   "harmonised": 12.622133241941345
+  },
+  {
+   "boundary": "VIIRS operational (MODIS -> MODIS+VIIRS)",
+   "date": "2012-01-01",
+   "truth": 9.39298846058546,
+   "raw_modis": 9.487485746926703,
+   "raw_viirs": 1.3105801111111112e+16,
+   "naive_sum": 654.8546624237556,
+   "harmonised": 9.972108121655259
+  },
+  {
+   "boundary": "NOAA-20 joins VIIRS (1->2 sats)",
+   "date": "2018-01-01",
+   "truth": -17.646336641005114,
+   "raw_modis": -17.723219779827144,
+   "raw_viirs": 53.826215776611164,
+   "naive_sum": 43.45449100387002,
+   "harmonised": -17.658617939281964
+  },
+  {
+   "boundary": "NOAA-21 joins VIIRS (2->3 sats)",
+   "date": "2024-01-01",
+   "truth": -36.58113192935907,
+   "raw_modis": -36.57329879953291,
+   "raw_viirs": -9.682472404900734,
+   "naive_sum": -11.920864850326206,
+   "harmonised": -36.54305004892733
+  }
+ ],
+ "quality_flag_days": {
+  "2": 4006,
+  "3": 11,
+  "0": 5061,
+  "1": 53
+ },
+ "outages": [
+  {
+   "sensor": "MODIS",
+   "start": "2002-07-01",
+   "end": "2002-07-14",
+   "injected_retention": 0.45,
+   "raw_drop_pct": 91.2,
+   "harmonised_bias_pct": -76.2
+  },
+  {
+   "sensor": "MODIS",
+   "start": "2020-06-15",
+   "end": "2020-06-29",
+   "injected_retention": 0.55,
+   "raw_drop_pct": 85.9,
+   "harmonised_bias_pct": 0.0
+  },
+  {
+   "sensor": "VIIRS",
+   "start": "2014-02-06",
+   "end": "2014-02-19",
+   "injected_retention": 0.25,
+   "raw_drop_pct": 26.2,
+   "harmonised_bias_pct": -0.2
+  },
+  {
+   "sensor": "VIIRS",
+   "start": "2019-02-03",
+   "end": "2019-02-11",
+   "injected_retention": 0.3,
+   "raw_drop_pct": -58.3,
+   "harmonised_bias_pct": -0.0
+  },
+  {
+   "sensor": "VIIRS",
+   "start": "2020-08-04",
+   "end": "2020-08-09",
+   "injected_retention": 0.35,
+   "raw_drop_pct": -112.9,
+   "harmonised_bias_pct": -0.1
+  },
+  {
+   "sensor": "VIIRS",
+   "start": "2023-05-12",
+   "end": "2023-05-20",
+   "injected_retention": 0.4,
+   "raw_drop_pct": -12.3,
+   "harmonised_bias_pct": 0.1
+  }
+ ],
+ "provinces": [
+  {
+   "province": "borneo",
+   "bias_pct": -0.76,
+   "rmse": 98255.41,
+   "mae": 25355.51,
+   "nrmse_pct": 2.97,
+   "pearson_r": 0.9985,
+   "spearman_rho": 0.9992,
+   "mean_est": 3286728.58,
+   "mean_truth": 3311854.44
+  },
+  {
+   "province": "sumatra",
+   "bias_pct": -0.76,
+   "rmse": 67418.87,
+   "mae": 16982.23,
+   "nrmse_pct": 3.04,
+   "pearson_r": 0.9987,
+   "spearman_rho": 0.9977,
+   "mean_est": 2201756.61,
+   "mean_truth": 2218563.0
+  },
+  {
+   "province": "middle_east",
+   "bias_pct": -1.04,
+   "rmse": 79129.77,
+   "mae": 18854.52,
+   "nrmse_pct": 4.42,
+   "pearson_r": 0.9756,
+   "spearman_rho": 0.94,
+   "mean_est": 1772130.07,
+   "mean_truth": 1790802.18
+  },
+  {
+   "province": "afr_sahel_c",
+   "bias_pct": -0.25,
+   "rmse": 6534.45,
+   "mae": 4384.87,
+   "nrmse_pct": 0.39,
+   "pearson_r": 1.0,
+   "spearman_rho": 0.9985,
+   "mean_est": 1689914.17,
+   "mean_truth": 1694168.83
+  },
+  {
+   "province": "afr_sahel_w",
+   "bias_pct": -0.25,
+   "rmse": 5801.17,
+   "mae": 4017.82,
+   "nrmse_pct": 0.37,
+   "pearson_r": 1.0,
+   "spearman_rho": 0.9992,
+   "mean_est": 1547304.02,
+   "mean_truth": 1551178.2
+  },
+  {
+   "province": "afr_zambezi",
+   "bias_pct": -0.34,
+   "rmse": 9885.65,
+   "mae": 4732.19,
+   "nrmse_pct": 0.75,
+   "pearson_r": 0.9996,
+   "spearman_rho": 0.9992,
+   "mean_est": 1316184.08,
+   "mean_truth": 1320726.73
+  },
+  {
+   "province": "mexico_central",
+   "bias_pct": -0.34,
+   "rmse": 7185.85,
+   "mae": 3449.48,
+   "nrmse_pct": 0.79,
+   "pearson_r": 0.9993,
+   "spearman_rho": 0.9992,
+   "mean_est": 904807.67,
+   "mean_truth": 907892.31
+  },
+  {
+   "province": "ven_llanos",
+   "bias_pct": -0.23,
+   "rmse": 3105.24,
+   "mae": 2072.84,
+   "nrmse_pct": 0.36,
+   "pearson_r": 0.9999,
+   "spearman_rho": 1.0,
+   "mean_est": 860526.86,
+   "mean_truth": 862490.47
+  },
+  {
+   "province": "siberia_w",
+   "bias_pct": -1.38,
+   "rmse": 48690.77,
+   "mae": 11152.1,
+   "nrmse_pct": 6.09,
+   "pearson_r": 0.9864,
+   "spearman_rho": 0.9577,
+   "mean_est": 788620.48,
+   "mean_truth": 799687.18
+  },
+  {
+   "province": "us_southeast_ag",
+   "bias_pct": -0.48,
+   "rmse": 8285.37,
+   "mae": 3078.64,
+   "nrmse_pct": 1.37,
+   "pearson_r": 0.9949,
+   "spearman_rho": 0.9715,
+   "mean_est": 603675.25,
+   "mean_truth": 606563.05
+  },
+  {
+   "province": "afr_congo_s",
+   "bias_pct": -0.78,
+   "rmse": 16360.65,
+   "mae": 4378.6,
+   "nrmse_pct": 2.93,
+   "pearson_r": 0.9914,
+   "spearman_rho": 0.9723,
+   "mean_est": 554706.64,
+   "mean_truth": 559047.5
+  },
+  {
+   "province": "global_background",
+   "bias_pct": -0.38,
+   "rmse": 5242.4,
+   "mae": 1943.65,
+   "nrmse_pct": 1.06,
+   "pearson_r": 0.9978,
+   "spearman_rho": 0.9992,
+   "mean_est": 491543.99,
+   "mean_truth": 493433.8
+  },
+  {
+   "province": "se_asia_main",
+   "bias_pct": -0.26,
+   "rmse": 2061.02,
+   "mae": 1323.2,
+   "nrmse_pct": 0.44,
+   "pearson_r": 1.0,
+   "spearman_rho": 1.0,
+   "mean_est": 465294.96,
+   "mean_truth": 466508.17
+  },
+  {
+   "province": "iran_afghan",
+   "bias_pct": -0.77,
+   "rmse": 13448.23,
+   "mae": 3553.5,
+   "nrmse_pct": 2.95,
+   "pearson_r": 0.9783,
+   "spearman_rho": 0.9654,
+   "mean_est": 451676.95,
+   "mean_truth": 455196.18
+  },
+  {
+   "province": "afr_ethiop",
+   "bias_pct": -0.22,
+   "rmse": 1514.97,
+   "mae": 1028.64,
+   "nrmse_pct": 0.34,
+   "pearson_r": 0.9998,
+   "spearman_rho": 0.9992,
+   "mean_est": 441574.86,
+   "mean_truth": 442554.32
+  },
+  {
+   "province": "bra_cerrado",
+   "bias_pct": -0.41,
+   "rmse": 5077.56,
+   "mae": 1861.36,
+   "nrmse_pct": 1.16,
+   "pearson_r": 0.9991,
+   "spearman_rho": 0.9992,
+   "mean_est": 435271.0,
+   "mean_truth": 437069.77
+  }
+ ],
+ "extremes": {
+  "detected": 34,
+  "total": 41,
+  "rows": [
+   {
+    "province": "europe_north",
+    "year": 2010,
+    "months": [
+     7,
+     8
+    ],
+    "injected_multiplier": 2.2,
+    "anomaly_z": 4.88,
+    "detected": true
+   },
+   {
+    "province": "siberia_w",
+    "year": 2010,
+    "months": [
+     7,
+     8
+    ],
+    "injected_multiplier": 2.6,
+    "anomaly_z": 5.62,
+    "detected": true
+   },
+   {
+    "province": "sumatra",
+    "year": 2015,
+    "months": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "injected_multiplier": 2.4,
+    "anomaly_z": 4.56,
+    "detected": true
+   },
+   {
+    "province": "borneo",
+    "year": 2015,
+    "months": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "injected_multiplier": 2.6,
+    "anomaly_z": 3.17,
+    "detected": true
+   },
+   {
+    "province": "png",
+    "year": 2015,
+    "months": [
+     8,
+     9,
+     10
+    ],
+    "injected_multiplier": 1.8,
+    "anomaly_z": 8.03,
+    "detected": true
+   },
+   {
+    "province": "java_bali",
+    "year": 2015,
+    "months": [
+     9,
+     10
+    ],
+    "injected_multiplier": 1.5,
+    "anomaly_z": 5.02,
+    "detected": true
+   },
+   {
+    "province": "bra_amazon_s",
+    "year": 2005,
+    "months": [
+     8,
+     9,
+     10
+    ],
+    "injected_multiplier": 1.9,
+    "anomaly_z": 0.97,
+    "detected": false
+   },
+   {
+    "province": "bra_amazon_s",
+    "year": 2010,
+    "months": [
+     8,
+     9
+    ],
+    "injected_multiplier": 1.8,
+    "anomaly_z": 3.67,
+    "detected": true
+   },
+   {
+    "province": "bra_amazon_c",
+    "year": 2010,
+    "months": [
+     8,
+     9
+    ],
+    "injected_multiplier": 1.7,
+    "anomaly_z": 1.7,
+    "detected": true
+   },
+   {
+    "province": "aus_east",
+    "year": 2019,
+    "months": [
+     11,
+     12
+    ],
+    "injected_multiplier": 3.5,
+    "anomaly_z": 6.46,
+    "detected": true
+   },
+   {
+    "province": "aus_east",
+    "year": 2020,
+    "months": [
+     1,
+     2
+    ],
+    "injected_multiplier": 3.0,
+    "anomaly_z": 2.94,
+    "detected": true
+   },
+   {
+    "province": "aus_south_west",
+    "year": 2020,
+    "months": [
+     1,
+     2
+    ],
+    "injected_multiplier": 1.8,
+    "anomaly_z": 1.61,
+    "detected": true
+   },
+   {
+    "province": "aus_north",
+    "year": 2002,
+    "months": [
+     9,
+     10,
+     11
+    ],
+    "injected_multiplier": 1.6,
+    "anomaly_z": 0.44,
+    "detected": false
+   },
+   {
+    "province": "canada_boreal_w",
+    "year": 2023,
+    "months": [
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "injected_multiplier": 3.2,
+    "anomaly_z": 2.53,
+    "detected": true
+   },
+   {
+    "province": "canada_boreal_e",
+    "year": 2023,
+    "months": [
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "injected_multiplier": 3.0,
+    "anomaly_z": 4.47,
+    "detected": true
+   },
+   {
+    "province": "canada_boreal_w",
+    "year": 2016,
+    "months": [
+     5
+    ],
+    "injected_multiplier": 2.0,
+    "anomaly_z": 4.2,
+    "detected": true
+   },
+   {
+    "province": "canada_boreal_e",
+    "year": 2025,
+    "months": [
+     7,
+     8
+    ],
+    "injected_multiplier": 1.7,
+    "anomaly_z": 1.48,
+    "detected": false
+   },
+   {
+    "province": "us_west",
+    "year": 2020,
+    "months": [
+     8,
+     9,
+     10
+    ],
+    "injected_multiplier": 2.6,
+    "anomaly_z": 2.59,
+    "detected": true
+   },
+   {
+    "province": "us_west",
+    "year": 2021,
+    "months": [
+     7,
+     8,
+     9
+    ],
+    "injected_multiplier": 2.2,
+    "anomaly_z": 1.51,
+    "detected": true
+   },
+   {
+    "province": "us_west",
+    "year": 2018,
+    "months": [
+     8,
+     9
+    ],
+    "injected_multiplier": 1.8,
+    "anomaly_z": 1.86,
+    "detected": true
+   },
+   {
+    "province": "us_west",
+    "year": 2025,
+    "months": [
+     1
+    ],
+    "injected_multiplier": 1.9,
+    "anomaly_z": 2.9,
+    "detected": true
+   },
+   {
+    "province": "med_iberia",
+    "year": 2003,
+    "months": [
+     8
+    ],
+    "injected_multiplier": 2.2,
+    "anomaly_z": 2.29,
+    "detected": true
+   },
+   {
+    "province": "med_greece",
+    "year": 2007,
+    "months": [
+     8
+    ],
+    "injected_multiplier": 2.5,
+    "anomaly_z": 2.04,
+    "detected": true
+   },
+   {
+    "province": "med_greece",
+    "year": 2018,
+    "months": [
+     7
+    ],
+    "injected_multiplier": 2.0,
+    "anomaly_z": 7.58,
+    "detected": true
+   },
+   {
+    "province": "med_iberia",
+    "year": 2017,
+    "months": [
+     10
+    ],
+    "injected_multiplier": 2.0,
+    "anomaly_z": 3.11,
+    "detected": true
+   },
+   {
+    "province": "med_balkans",
+    "year": 2021,
+    "months": [
+     8
+    ],
+    "injected_multiplier": 2.0,
+    "anomaly_z": 2.48,
+    "detected": true
+   },
+   {
+    "province": "med_iberia",
+    "year": 2022,
+    "months": [
+     7,
+     8
+    ],
+    "injected_multiplier": 1.8,
+    "anomaly_z": 1.66,
+    "detected": true
+   },
+   {
+    "province": "siberia_e",
+    "year": 2021,
+    "months": [
+     7,
+     8
+    ],
+    "injected_multiplier": 2.6,
+    "anomaly_z": 1.62,
+    "detected": true
+   },
+   {
+    "province": "siberia_e",
+    "year": 2019,
+    "months": [
+     7,
+     8
+    ],
+    "injected_multiplier": 1.9,
+    "anomaly_z": 2.72,
+    "detected": true
+   },
+   {
+    "province": "mongolia",
+    "year": 2022,
+    "months": [
+     4,
+     5
+    ],
+    "injected_multiplier": 1.8,
+    "anomaly_z": 2.47,
+    "detected": true
+   },
+   {
+    "province": "ind_gangetic",
+    "year": 2019,
+    "months": [
+     11
+    ],
+    "injected_multiplier": 1.6,
+    "anomaly_z": 0.85,
+    "detected": false
+   },
+   {
+    "province": "bol_beni",
+    "year": 2019,
+    "months": [
+     9,
+     10
+    ],
+    "injected_multiplier": 2.2,
+    "anomaly_z": 4.47,
+    "detected": true
+   },
+   {
+    "province": "bol_beni",
+    "year": 2024,
+    "months": [
+     9,
+     10
+    ],
+    "injected_multiplier": 2.4,
+    "anomaly_z": 1.75,
+    "detected": true
+   },
+   {
+    "province": "bra_cerrado",
+    "year": 2017,
+    "months": [
+     9,
+     10
+    ],
+    "injected_multiplier": 1.7,
+    "anomaly_z": 1.91,
+    "detected": true
+   },
+   {
+    "province": "bra_amazon_s",
+    "year": 2024,
+    "months": [
+     8,
+     9,
+     10
+    ],
+    "injected_multiplier": 2.0,
+    "anomaly_z": 1.63,
+    "detected": true
+   },
+   {
+    "province": "ven_llanos",
+    "year": 2024,
+    "months": [
+     2,
+     3
+    ],
+    "injected_multiplier": 1.7,
+    "anomaly_z": 0.87,
+    "detected": false
+   },
+   {
+    "province": "afr_congo_s",
+    "year": 2016,
+    "months": [
+     8,
+     9
+    ],
+    "injected_multiplier": 1.4,
+    "anomaly_z": 1.97,
+    "detected": true
+   },
+   {
+    "province": "afr_zambezi",
+    "year": 2011,
+    "months": [
+     9,
+     10
+    ],
+    "injected_multiplier": 1.3,
+    "anomaly_z": -0.01,
+    "detected": false
+   },
+   {
+    "province": "chi_central",
+    "year": 2017,
+    "months": [
+     1,
+     2
+    ],
+    "injected_multiplier": 2.0,
+    "anomaly_z": 7.38,
+    "detected": true
+   },
+   {
+    "province": "patagonia",
+    "year": 2025,
+    "months": [
+     1,
+     2,
+     3
+    ],
+    "injected_multiplier": 1.8,
+    "anomaly_z": 1.03,
+    "detected": false
+   },
+   {
+    "province": "uk_heather",
+    "year": 2019,
+    "months": [
+     3,
+     4
+    ],
+    "injected_multiplier": 1.5,
+    "anomaly_z": 1.64,
+    "detected": true
+   }
+  ]
+ },
+ "critical_periods_global": [
+  {
+   "start": "2001-01-01",
+   "end": "2001-03-18",
+   "days": 77,
+   "events": 6104621.8
+  },
+  {
+   "start": "2001-05-02",
+   "end": "2001-05-31",
+   "days": 30,
+   "events": 1525880.8
+  },
+  {
+   "start": "2001-10-05",
+   "end": "2001-10-11",
+   "days": 7,
+   "events": 413125.0
+  },
+  {
+   "start": "2001-10-20",
+   "end": "2001-10-29",
+   "days": 10,
+   "events": 586657.9
+  },
+  {
+   "start": "2002-01-01",
+   "end": "2002-03-31",
+   "days": 90,
+   "events": 6609928.7
+  },
+  {
+   "start": "2002-08-01",
+   "end": "2003-01-31",
+   "days": 184,
+   "events": 13261971.6
+  },
+  {
+   "start": "2003-11-04",
+   "end": "2003-11-12",
+   "days": 9,
+   "events": 263420.8
+  },
+  {
+   "start": "2003-11-19",
+   "end": "2003-11-30",
+   "days": 12,
+   "events": 350586.4
+  },
+  {
+   "start": "2004-01-01",
+   "end": "2004-01-31",
+   "days": 31,
+   "events": 1659840.7
+  },
+  {
+   "start": "2004-03-31",
+   "end": "2004-04-30",
+   "days": 31,
+   "events": 1937535.2
+  },
+  {
+   "start": "2004-10-31",
+   "end": "2004-12-31",
+   "days": 62,
+   "events": 1815220.2
+  },
+  {
+   "start": "2006-01-01",
+   "end": "2006-05-31",
+   "days": 151,
+   "events": 10270958.2
+  },
+  {
+   "start": "2006-08-06",
+   "end": "2006-08-13",
+   "days": 8,
+   "events": 996825.4
+  },
+  {
+   "start": "2006-08-19",
+   "end": "2006-08-26",
+   "days": 8,
+   "events": 994383.8
+  },
+  {
+   "start": "2006-12-01",
+   "end": "2006-12-31",
+   "days": 31,
+   "events": 827030.7
+  },
+  {
+   "start": "2008-02-01",
+   "end": "2008-02-29",
+   "days": 29,
+   "events": 2355656.7
+  },
+  {
+   "start": "2009-01-01",
+   "end": "2009-01-31",
+   "days": 31,
+   "events": 1690165.6
+  },
+  {
+   "start": "2009-04-02",
+   "end": "2009-06-01",
+   "days": 61,
+   "events": 3304372.6
+  },
+  {
+   "start": "2009-09-02",
+   "end": "2009-09-30",
+   "days": 29,
+   "events": 2961191.6
+  },
+  {
+   "start": "2009-11-02",
+   "end": "2009-12-31",
+   "days": 60,
+   "events": 1633031.8
+  },
+  {
+   "start": "2010-02-01",
+   "end": "2010-05-31",
+   "days": 120,
+   "events": 8762597.6
+  },
+  {
+   "start": "2010-07-01",
+   "end": "2010-12-31",
+   "days": 184,
+   "events": 16865488.2
+  },
+  {
+   "start": "2012-06-01",
+   "end": "2012-06-29",
+   "days": 29,
+   "events": 1469370.3
+  },
+  {
+   "start": "2013-03-02",
+   "end": "2013-03-13",
+   "days": 12,
+   "events": 922346.8
+  },
+  {
+   "start": "2013-03-19",
+   "end": "2013-03-31",
+   "days": 13,
+   "events": 997262.0
+  },
+  {
+   "start": "2013-10-02",
+   "end": "2013-10-31",
+   "days": 30,
+   "events": 1874789.4
+  },
+  {
+   "start": "2014-01-01",
+   "end": "2014-01-31",
+   "days": 31,
+   "events": 1649670.9
+  },
+  {
+   "start": "2014-03-01",
+   "end": "2014-03-31",
+   "days": 31,
+   "events": 2617344.7
+  },
+  {
+   "start": "2014-08-01",
+   "end": "2014-08-31",
+   "days": 31,
+   "events": 3862803.6
+  },
+  {
+   "start": "2014-11-02",
+   "end": "2014-12-31",
+   "days": 60,
+   "events": 1730494.4
+  },
+  {
+   "start": "2015-02-01",
+   "end": "2015-11-30",
+   "days": 303,
+   "events": 32665114.4
+  },
+  {
+   "start": "2016-03-31",
+   "end": "2016-04-30",
+   "days": 31,
+   "events": 1859023.4
+  },
+  {
+   "start": "2016-06-01",
+   "end": "2016-08-31",
+   "days": 92,
+   "events": 8471105.7
+  },
+  {
+   "start": "2016-09-30",
+   "end": "2016-10-31",
+   "days": 32,
+   "events": 2062143.4
+  },
+  {
+   "start": "2017-09-02",
+   "end": "2017-09-30",
+   "days": 29,
+   "events": 2839136.7
+  },
+  {
+   "start": "2018-06-01",
+   "end": "2018-08-03",
+   "days": 64,
+   "events": 4840821.5
+  },
+  {
+   "start": "2019-03-01",
+   "end": "2019-03-31",
+   "days": 31,
+   "events": 2478201.5
+  },
+  {
+   "start": "2019-05-02",
+   "end": "2019-12-31",
+   "days": 244,
+   "events": 16680980.5
+  },
+  {
+   "start": "2020-07-01",
+   "end": "2020-07-30",
+   "days": 30,
+   "events": 2841183.1
+  },
+  {
+   "start": "2023-02-01",
+   "end": "2023-02-28",
+   "days": 28,
+   "events": 2407252.1
+  }
+ ],
+ "trend_pct_per_year": {
+  "true": -0.14298799762255165,
+  "harmonised": -0.038126710495184686,
+  "raw_modis": 0.7298135094484223,
+  "naive_sum": 10.874715084540465
+ },
+ "annual": {
+  "years": [
+   2001,
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "true": [
+   21896660.0,
+   25665328.0,
+   21649900.0,
+   23447884.0,
+   20842462.0,
+   24321938.0,
+   18572832.0,
+   19578792.0,
+   23972750.0,
+   28752148.0,
+   18452182.0,
+   22019100.0,
+   21717324.0,
+   23053656.0,
+   34754160.0,
+   23589972.0,
+   22289944.0,
+   22829164.0,
+   23971116.0,
+   22127606.0,
+   19363490.0,
+   17447494.0,
+   26763460.0,
+   21832748.0,
+   19388392.0
+  ],
+  "harmonised": [
+   21807774.3,
+   23452965.6,
+   21551660.3,
+   23338928.9,
+   20735653.5,
+   24219907.1,
+   18466954.9,
+   19496512.6,
+   23855552.4,
+   28614037.8,
+   18358669.3,
+   22011903.4,
+   21710287.0,
+   23052767.8,
+   34761582.8,
+   23587147.5,
+   22288701.6,
+   22829876.9,
+   23968984.3,
+   22136518.8,
+   19362977.5,
+   17442814.1,
+   26759721.1,
+   21836419.5,
+   19387075.4
+  ],
+  "raw_modis": [
+   3632350,
+   6900680,
+   8826810,
+   9558813,
+   8492602,
+   9919631,
+   7563422,
+   7985093,
+   9770404,
+   11719314,
+   7519072,
+   8974790,
+   8852750,
+   9395806,
+   14167010,
+   9613153,
+   9083984,
+   9301721,
+   9776614,
+   8898211,
+   7893959,
+   7105988,
+   10904771,
+   8895369,
+   7905484
+  ],
+  "raw_viirs": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   52906553,
+   52180956,
+   53573927,
+   83555207,
+   56695425,
+   53574389,
+   102509398,
+   105862408,
+   97310318,
+   86936338,
+   78321817,
+   119117089,
+   139546555,
+   123879379
+  ],
+  "naive_sum": [
+   3632350,
+   6900680,
+   8826810,
+   9558813,
+   8492602,
+   9919631,
+   7563422,
+   7985093,
+   9770404,
+   11719314,
+   7519072,
+   61881343,
+   61033706,
+   62969733,
+   97722217,
+   66308578,
+   62658373,
+   111811119,
+   115639022,
+   106208529,
+   94830297,
+   85427805,
+   130021860,
+   148441924,
+   131784863
+  ]
+ },
+ "calibration": {
+  "modis": {
+   "a": 0.995,
+   "s50": 75,
+   "b": 0.8,
+   "mult_slope": 0.2124,
+   "mult_floor": 1.0,
+   "mult_cap": 40.0
+  },
+  "viirs": {
+   "a": 0.97,
+   "s50": 0.952,
+   "b": 1.2,
+   "mult_slope": 0.45,
+   "mult_floor": 1.0,
+   "mult_cap": 40.0
+  },
+  "frp_ratio_viirs_to_modis": 0.314,
+  "match_radius_km": 2.0,
+  "viirs_completeness": 0.804,
+  "modis_completeness": 0.153,
+  "viirs_multiplicity": 2.992,
+  "modis_multiplicity": 2.671,
+  "modis_completeness_given_viirs": 0.1743,
+  "union_completeness": 0.8168,
+  "modis_bridge_beta": 6.5353,
+  "rel_sigma_modis": 0.35,
+  "rel_sigma_viirs": 0.12,
+  "cluster_s_median": 10.0,
+  "cluster_sigma": 1.4,
+  "modis_frp_eta": 0.767,
+  "provenance": {
+   "source": "NASA FIRMS: MODIS C6.1 (Terra+Aqua) and Suomi NPP VIIRS C2, global 24 h",
+   "snapshot_dates": "2026-10-14, 2026-10-15",
+   "n_modis": "14217",
+   "n_viirs": "81473",
+   "fitted_parameters": "{\"s_med\": 10.0, \"s_sig\": 1.4, \"m_a\": 0.995, \"m_s50\": 75, \"m_b\": 0.8, \"m_ms\": 0.2124, \"v_a\": 0.97, \"v_s50\": 0.952, \"v_b\": 1.2, \"v_ms\": 0.45, \"eta\": 0.767, \"k_clump\": 26.432, \"k_hot\": 0.017, \"s_hot\": 56.0, \"q_indep\": 0.2}",
+   "co_registered_pairs": "7220",
+   "note": "Sensor model fitted by coordinate descent to 13 summary statistics of the real snapshot; see pipeline/calibrate_real.py."
+  }
+ }
+}
